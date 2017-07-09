@@ -1,0 +1,204 @@
+//Wide default button
+.btn {
+  border: none;
+  margin: 20px 0;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8em;
+  width: 225px;
+  height: 50px;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  cursor: hand;
+}
+
+//change color
+.btn-success {
+  background-color: $green;
+  color: white;
+}
+
+//change color
+.btn-black {
+  background-color: $black;
+  color: white;
+}
+
+//change view button
+.btn-view {
+    cursor: pointer;
+    padding: 10px;
+}
+
+//Filter events by time
+.btn-filter {
+  background-color: transparent;
+  width: 100px;
+  margin: 0 20px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.btn-filter:hover {
+  cursor: hand;
+}
+
+
+//2 hovering buttons for adding and submitting
+.btn-add {
+  width: 50px;
+  height: 50px;
+  background-color: $black;
+  color: white;
+  border-width: 0;
+  position: fixed;
+  bottom:3%;
+  right:3%;
+  border-radius: 50%;
+  font-size: 3rem;
+}
+
+.btn-add:hover {
+  cursor: hand;
+}
+
+.btn-submit {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  color: white;
+  border-width: 0;
+  position:fixed;
+  bottom:3%;
+  right:3%;
+  border-radius: 50%;
+  font-size: 3rem;
+}
+
+
+//3 Action buttons
+.edit {
+  width: 100px;
+  height: 35px;
+  text-transform: uppercase;
+  background-color: $grey;
+  font-size: 1.2rem;
+  color: $darkGrey;
+  border: none;
+  border-radius: 3px;
+}
+
+.edit:hover {
+  cursor: hand;
+}
+
+.leave {
+  width: 100px;
+  height: 35px;
+  text-transform: uppercase;
+  background-color: $pink;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.leave:hover {
+  cursor: hand;
+}
+
+.join {
+  width: 100px;
+  height: 35px;
+  text-transform: uppercase;
+  background-color: $green;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.join:hover {
+  cursor: hand;
+}
+
+
+//Rest is for dropdown btn
+
+.smallCircle {
+  font-size: 1.3rem;
+  background-color: $grey;
+  border-radius: 50%;
+  color: $darkGrey;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+.dropdown {
+  // position: absolute;
+  display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: $darkGrey;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 1.6rem;
+    border: none;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: $grey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 500px) {
+  .navName {
+    display: none;
+  }
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: $darkGrey;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+
+
+
+// @media (min-width: 501px) {
+//    .navName {
+//      width: 150px;
+//      margin-right: 70px;
+//    }
+// }

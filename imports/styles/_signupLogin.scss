@@ -1,0 +1,99 @@
+.signUp {
+  background: white;
+  height: 100vh;
+  width: 100vw;
+
+  input {
+    border: none;
+    border-bottom: 1px solid $grey;
+    margin: 10px 0;
+    padding: 8px 0;
+  }
+
+  input::placeholder {
+    color: $grey;
+  }
+
+  btn {
+    padding: 50px 0;
+  }
+}
+
+.signUpBox {
+  width: 100%;
+  margin: 5% 20%;
+}
+
+  @media (min-width: 1100px) {
+    .signUp {
+      background-image: url(images/stormtroopers.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 400px 100%;
+
+      .logo {
+        color: white;
+      }
+
+      .signUpBox {
+        width: 500px;
+        margin-left: 45%;
+        margin-top: 5%;
+      }
+    }
+
+  }
+
+
+.wrongInput {
+  border-bottom-color: red;
+}
+
+.errorText {
+  color: red;
+  font-size: 1.4rem;
+}
+
+.accountPC {
+  @extend .smaller;
+  display: none
+}
+
+@media (min-width: 501px) {
+  .accountPC {
+    display: block;
+    padding-top: 25px;
+    padding-right: 50px;
+  }
+}
+
+.accountMobile {
+  @extend .smaller;
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .accountMobile {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+.actionText {
+  text-decoration: none;
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+
+.passwordSpan {
+  position: relative;
+}
+
+.showPassword {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

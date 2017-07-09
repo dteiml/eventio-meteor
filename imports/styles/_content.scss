@@ -1,0 +1,388 @@
+
+//App-wide
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: $lightGrey;
+  height: -webkit-calc(100% - 90px);
+    height:    -moz-calc(100% - 90px);
+    height:         calc(100% - 90px);
+  min-height: -webkit-calc(100vh - 90px);
+    min-height:    -moz-calc(100vh - 90px);
+    min-height:         calc(100vh - 90px);
+  // width: -webkit-calc(100hw - 60px);
+  //   width:    -moz-calc(100hw - 60px);
+  //   width:         calc(100hw - 60px);
+  padding: 45px 30px;
+}
+
+.section {
+  max-width: 1170px;
+  margin: 7.5% 30px;
+}
+
+
+.eventId {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 0 10px 10px;
+}
+
+
+@media (max-width: 700px) {
+  .filterEventsMobile {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    select {
+      border: none;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+  .filterEventsPC {
+    display: none;
+  }
+}
+
+@media (min-width: 701px) {
+  .filterEventsMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 501px) {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    align-items: center;
+  }
+}
+
+.listItem {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  margin: 5px 0;
+}
+
+//phone and tablet
+
+@media (max-width: 1100px) {
+  .listItem {
+    max-width: 400px;
+  }
+}
+
+.detailsSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gridItem {
+  background-color: white;
+  max-width: 330px;
+  width: 87.5%;
+  height: 270px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.gridItemWide {
+  @extend .gridItem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.gridContent {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+
+  .itemDate {
+    font-size: 1.4rem;
+    color: $grey;
+    margin-top: 10px;
+    padding: 5px 20px 25px 20px;
+  }
+
+  .itemTitle {
+    color: $black;
+    font-size: 2.3rem;
+    margin: -2px 20px;
+    line-height: 2.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .itemTitleList {
+    color: $black;
+    font-size: 1.7rem;
+    padding: 5px 20px;
+  }
+
+  .itemHost {
+    color: $darkGrey;
+    margin: -2px 20px;
+    font-weight: 100;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .itemDescription {
+    color: $grey;
+    padding: 20px 20px;
+    font-weight: 100;
+    max-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .itemFooter {
+    margin:  auto 20px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .itemCapacity {
+    color: $darkGrey;
+  }
+}
+
+.listContent {
+  display: flex;
+  min-height: 70px;
+  padding: 0 20px;
+}
+
+//phone and tablet
+@media (max-width: 1100px) {
+  .listContent {
+    flex-direction: column;
+    padding: 20px;
+
+    .dateAndCapacity {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .itemDate {
+      font-size: 1.3rem;
+      color: $grey;
+    }
+
+    .itemTitle {
+      color: $black;
+      font-size: 1.7rem;
+    }
+
+    .itemHost {
+      display: none;
+    }
+
+    .itemDescription {
+      color: $grey;
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+
+    .itemFooter {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .itemCapacity {
+      color: $darkGrey;
+    }
+  }
+}
+
+
+//desktop
+@media (min-width: 1101px) {
+  .listContent {
+      align-items: center;
+
+    .itemTitle {
+      position: relative;
+      color: $black;
+      font-size: 1.7rem;
+      max-width: 200px;
+      width: 160px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .itemDescription {
+      position: relative;
+      color: $grey;
+      font-weight: 100;
+      left: 40px;
+      max-width: 290px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      z-index: 1;
+    }
+
+    .itemHost {
+      color: $darkGrey;
+      position: relative;
+      font-weight: 100;
+      margin-left: auto;
+      padding-left: 20px;
+      right: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: white;
+      z-index: 2;
+    }
+
+    .itemDate {
+      font-size: 1.3rem;
+      color: $grey;
+      position: relative;
+      margin-left: auto;
+      right: 130px;
+    }
+
+    .itemCapacity {
+      color: $darkGrey;
+      position: relative;
+      margin-left: auto;
+      right: 70px;
+    }
+
+    .listItemBtn {
+      position: relative;
+      bottom: 0px;
+      margin-left: auto;
+      right: 0px;
+    }
+
+    .itemFooter {
+      width: 280px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+//create form
+.form {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px auto;
+  max-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 3px;
+
+
+  input {
+    border: none;
+    border-bottom: 1px solid $grey;
+    margin: 10px 0;
+    padding: 8px 0;
+    color: $grey;
+    text-align: left;
+    max-width: 350px;
+    width: 100%;
+
+
+  }
+
+  input::placeholder {
+    color: $grey;
+  }
+
+  btn {
+    // text-align: center;
+    margin: 80px auto;
+    text-transform: uppercase;
+
+  }
+}
+
+.attendees {
+  h1 {
+    margin: 20px;
+  }
+
+  p {
+    margin: 0 10px;
+  }
+
+  .attendantName {
+    background-color: $grey;
+    border-radius: 20px;
+    color: $darkGrey;
+    margin: 10px;
+    padding: 7px 15px;
+  }
+}
+
+.editForm {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  height: 440px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 5px 5px;
+
+  input {
+    border: none;
+    border-bottom: 1px solid $grey;
+    margin: 10px 0;
+    padding: 8px 0;
+    color: $grey;
+    text-align: left;
+    max-width: 350px;
+    width: 100%;
+  }
+}
